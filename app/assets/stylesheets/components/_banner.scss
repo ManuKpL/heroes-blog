@@ -1,0 +1,24 @@
+.banner {
+  position: relative;
+  background-image: url('https://unsplash.it/2000/1000?image=57');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  &-content {
+    color: white;
+    z-index: 2;
+  }
+  &-shadow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(20deg, rgba(44,48,154,0.4) 20%, rgba(44,48,154,0.2) 80%);
+  }
+}
