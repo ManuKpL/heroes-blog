@@ -1,31 +1,31 @@
-<nav class="navbar-wagon">
-  <div class="container navbar-wagon-container">
+<nav class="navbar-hb">
+  <div class="container navbar-hb-container">
 
     <a href="">
       <%= image_tag "logo.png" %>
     </a>
 
-    <div class="navbar-wagon-pusher"></div>
+    <div class="navbar-hb-pusher"></div>
 
-    <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
+    <form action="" class="navbar-hb-search hidden-xs hidden-sm">
+      <input type="text" class="navbar-hb-search-input" placeholder="Search something">
+      <button type="submit" class="navbar-hb-search-btn">
         <i class="fa fa-search"></i>
       </button>
     </form>
     <hr class="hidden-xs hidden-sm">
     <% if user_signed_in? %>
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link hidden-xs" do %>
+      <%= link_to "#", class: "navbar-hb-item navbar-hb-link hidden-xs" do %>
         <div class="icon-badge-container">
           <i class="fa fa-envelope-o"></i>
           <div class="icon-badge icon-badge-blue">3</div>
         </div>
       <% end %>
       <hr>
-      <div class="navbar-wagon-item">
+      <div class="navbar-hb-item">
         <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-hb-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-hb-dropdown-menu">
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
@@ -45,9 +45,9 @@
         </div>
       </div>
     <% else %>
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-hb-item navbar-hb-link" %>
     <% end %>
     <hr>
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-hb-item navbar-hb-button btn" %>
   </div>
 </nav>
