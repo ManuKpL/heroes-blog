@@ -2,26 +2,26 @@
   <div class="container navbar-hb-container">
 
     <a href="">
-      <%= image_tag "logo.png" %>
+      <h2>Heroes</h2>
     </a>
 
     <div class="navbar-hb-pusher"></div>
 
-    <form action="" class="navbar-hb-search hidden-xs hidden-sm">
+    <!-- <form action="" class="navbar-hb-search hidden-xs hidden-sm">
       <input type="text" class="navbar-hb-search-input" placeholder="Search something">
       <button type="submit" class="navbar-hb-search-btn">
         <i class="fa fa-search"></i>
       </button>
-    </form>
-    <hr class="hidden-xs hidden-sm">
+    </form> -->
+    <!-- <hr class="hidden-xs hidden-sm"> -->
     <% if user_signed_in? %>
-      <%= link_to "#", class: "navbar-hb-item navbar-hb-link hidden-xs" do %>
-        <div class="icon-badge-container">
+      <%#= link_to "#", class: "navbar-hb-item navbar-hb-link hidden-xs" do %>
+        <!-- <div class="icon-badge-container">
           <i class="fa fa-envelope-o"></i>
           <div class="icon-badge icon-badge-blue">3</div>
-        </div>
-      <% end %>
-      <hr>
+        </div> -->
+      <%# end %>
+      <!-- <hr> -->
       <div class="navbar-hb-item">
         <div class="dropdown">
           <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-hb-menu", "data-toggle" => "dropdown" %>
@@ -34,6 +34,11 @@
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to admin_root_path do %>
+                <i class="fa fa-cog"></i> <%= t ".admin", default: "Admin" %>
               <% end %>
             </li>
             <li>
